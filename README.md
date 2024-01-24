@@ -3,22 +3,22 @@ I have been predomently developing software on Microsoft and related technology 
 
 Now days the open source projects are not limited to personal projects but also many business are now adopting open source projects.
 
-	- C++
- 		C/C++ are Low-level programming languages, any higher level legnguage can't compete in terms of performance, and reliablity however this language are not simple to read and understand at first sign.
+- __C++__
+  > C/C++ are Low-level programming languages, any higher level legnguage can't compete in terms of performance, and reliablity however this language are not simple to read and understand at first sign.
    
-	- Go
- 		Go is a statically typed, compiled high-level programming language.
+- __Go__
+  > Go is a statically typed, compiled high-level programming language.
  
- 	- C#
-  		C# is higher-level compiled programing language.
-    
-  	- Java
-   		Java is high-level and compiled langaugage.
-     
-   	- Python
-    		Python is a high-level, general-purpose programming language and an interpreted language.
+- __C#__
+  > C# is higher-level compiled programing language, .Net frame work is needed to host the applicaton at run time.
 
+- __Java__
+  > Java is compiled high-level programing langaugage. JVM is needed to host the applicaton at run time.
 
+- __Python__
+  > Python is an interpreted high-level, general-purpose programming language.
+
+-----------------
 
 |               | OOP Standard  | Low level     | High level    | Interpreted   | Output       | Note                                                                   |
 | ------------- | ------------- | ------------- |-------------- | ------------- | ------------ | ---------------------------------------------------------------------- |
@@ -28,8 +28,8 @@ Now days the open source projects are not limited to personal projects but also 
 | Java          |    &check;    |               |    &check;    |               | Byte code    | Compiled to byte code which can only invoked though JVM                |
 | Python        |    &check;    |               |               |    &check;    | N/A          | Follows OOP.                                                           |
 
-
 -----------------
+
 ## Execution test
 Although this comparision of tasks ran on same workstation and with similar sort of load, but this is not valid comparision as below languages are dominating different domains. The project is for my personal reference, it simply counts upto ten million (10000000) and corresponding elapsed time is logged in output.
 
@@ -61,7 +61,7 @@ int main()
     Elapsed time: 0.001272ms
 
 
-## Go, 
+## Go 
 ```
 package main
 
@@ -86,7 +86,7 @@ func main() {
     Elapsed time:  0.0032457 ms
 
 
-## C#, the one I am using for over 15 years
+## C#
 ```
 using System;
 
@@ -122,7 +122,7 @@ internal class Program
     Elapsed time: tbc
 
 
-## Python, Interpreted language
+## Python
 ```
 import datetime
 sttm = datetime.datetime.utcnow()
