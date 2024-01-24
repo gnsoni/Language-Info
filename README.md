@@ -1,5 +1,37 @@
-# Language Performace
-The project is created as reference for the performance of programing languages, simply counts upto ten million (10000000) and corresponding elapsed time is logged in output.
+# Language comparision
+I have been predomently developing software on Microsoft and related technology for over 20 year now, few years back I migrated my personnal monolith VB 6 winform project to ASP.Net core api as backend with Angualr as frontend. 
+
+Now days the open source projects are not limited to personal projects but also many business are now adopting open source projects.
+
+	- C++
+ 		C/C++ are Low-level programming languages, any higher level legnguage can't compete in terms of performance, and reliablity however this language are not simple to read and understand at first sign.
+   
+	- Go
+ 		Go is a statically typed, compiled high-level programming language.
+ 
+ 	- C#
+  		C# is higher-level compiled programing language.
+    
+  	- Java
+   		Java is high-level and compiled langaugage.
+     
+   	- Python
+    		Python is a high-level, general-purpose programming language and an interpreted language.
+
+
+
+|               | OOP Standard  | Low level     | High level    | Interpreted   | Output       | Note                                                                   |
+| ------------- | ------------- | ------------- |-------------- | ------------- | ------------ | ---------------------------------------------------------------------- |
+| C/C++         |    &check;    |    &check;    |               |               | Machine code | Compiled to matchine code.                                             |
+| Go            |               |               |    &check;    |               | Machine code | Compiled to matchine code.                                             |
+| C#            |    &check;    |               |    &check;    |               | Byte code    | Compiled to byte code which can only invoked with .Net framework       |
+| Java          |    &check;    |               |    &check;    |               | Byte code    | Compiled to byte code which can only invoked though JVM                |
+| Python        |    &check;    |               |               |    &check;    | N/A          | Follows OOP.                                                           |
+
+
+-----------------
+## Execution test
+Although this comparision of tasks ran on same workstation and with similar sort of load, but this is not valid comparision as below languages are dominating different domains. The project is for my personal reference, it simply counts upto ten million (10000000) and corresponding elapsed time is logged in output.
 
 ## C++
 ```
