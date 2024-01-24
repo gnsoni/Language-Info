@@ -138,4 +138,4 @@ delta = (etm - sttm)
 print("Elapsed time: " + str(delta * 1000) + "ms")
 ```
 ### Output
-    Elapsed time: 0:10:50.824000ms
+    Elapsed time: 0:00:10.824000ms
