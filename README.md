@@ -54,11 +54,11 @@ int main()
     const auto etm = std::chrono::high_resolution_clock::now();
     const std::chrono::duration<double, std::milli> elapsed = etm - sttm;
  
-    std::cout << "Elapsed time: " << elapsed << '\n';
+    std::cout << "Elapsed time: " << elapsed.count() << '\n';
 }
 ```
 ### Output
-    Elapsed time: 0.001272ms
+> Elapsed time: 24.1102
 
 
 ## Go 
@@ -78,12 +78,11 @@ func main() {
 	}
 	var etm = time.Now()
 
-	fmt.Println("Elapsed time: ", etm.Sub(sttm).Milliseconds(), " ms")
-
+	fmt.Println("Elapsed time: ", etm.Sub(sttm).Microseconds()/1000.0, "ms")
 }
 ```
 ### Output
-    Elapsed time:  0.0032457 ms
+> Elapsed time:  4 ms
 
 
 ## C#
@@ -111,31 +110,52 @@ internal class Program
 
 ```
 ### Output
-    Elapsed time: 00:00:00.0312505ms
+> Elapsed time: 51.6829ms
 
 
 ## Java
 ```
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
+public class fp {
+  public static void main(String[] args) {
+
+        Date startdt = new Date();
+ 
+    int i = 0;
+    while (i < 10000000) {
+      i++;
+    }
+
+    Date enddt = new Date();
+ 
+    long diffInMillies = Math.abs(enddt.getTime() - startdt.getTime());
+    long diff = TimeUnit.MILLISECONDS.convert(diffInMillies * 1.0, TimeUnit.MILLISECONDS);
+
+        System.out.println("Elapsed time: " + diff * 1.0 + "ms");
+  }
+}
 ```
 ### Output
-    Elapsed time: tbc
+> Elapsed time: 11.0ms
+
 
 
 ## Python
 ```
 import datetime
-sttm = datetime.datetime.utcnow()
+sttm = datetime.datetime.now()
 i = 1
 
 while i < 10000000:
   i += 1
 
-etm = datetime.datetime.utcnow()
+etm = datetime.datetime.now()
 
-delta = (etm - sttm)
+delta = (etm - sttm).microseconds / 1000
 
-print("Elapsed time: " + str(delta * 1000) + "ms")
+print("Elapsed time: " + str(delta) + "ms")
 ```
 ### Output
-    Elapsed time: 0:00:10.824000ms
+> Elapsed time: 667.987ms
